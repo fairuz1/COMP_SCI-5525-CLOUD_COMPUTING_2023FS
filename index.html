@@ -87,10 +87,10 @@
         function getCloudProviderName() {
             let pageUrl = window.location.href;
             let link = document.getElementById('cloudProvider');
-            if (pageUrl === 'http://fairuzbucket.s3-website.us-east-2.amazonaws.com') {
+            if (pageUrl === 'http://fairuzbucket.s3-website.us-east-2.amazonaws.com/') {
                 link.innerHTML = 'Amazon Web Services';
                 link.href = 'https://aws.amazon.com/';
-            } else if (pageUrl === 'https://azariastorage.z13.web.core.windows.net') {
+            } else if (pageUrl === 'https://azariastorage.z13.web.core.windows.net/') {
                 link.innerHTML = 'Microsoft Azure';
                 link.href = 'https://azure.microsoft.com/en-us';
             } else if (pageUrl === 'https://storage.googleapis.com/azariabucket/index.html') {
@@ -100,6 +100,7 @@
                 link.innerHTML = 'Local Development';
                 link.href = '';
             }
+            console.log(pageUrl);
         };
     </script>
 </body>
